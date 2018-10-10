@@ -9,7 +9,7 @@ public class Application {
     public static void main(String[] args) {
         int beginInterval = 0;
         int endInterval = 0;
-        int setSize = 0;
+        int fibonacciRowSize = 0;
 
         Reader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -20,11 +20,11 @@ public class Application {
             System.out.println("Enter the end of interval : ");
             endInterval = Integer.parseInt(bufferedReader.readLine());
             System.out.println("Enter the size of fibonacci set : ");
-            setSize = Integer.parseInt(bufferedReader.readLine());
+            fibonacciRowSize = Integer.parseInt(bufferedReader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        NumberCounter numberCounter = new NumberCounter(beginInterval, endInterval, setSize);
+        NumberCounter numberCounter = new NumberCounter(beginInterval, endInterval, fibonacciRowSize);
         numberCounter.printResults();
     }
 }
