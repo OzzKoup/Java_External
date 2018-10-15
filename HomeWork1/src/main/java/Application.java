@@ -1,4 +1,4 @@
-import com.fibonacci.NumberCounter;
+import com.fibonacci.FibonacciInitializer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ public class Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        NumberCounter numberCounter = new NumberCounter(beginInterval, endInterval, fibonacciRowSize);
-        numberCounter.printResults();
+        FibonacciInitializer fibonacciInitializer = new FibonacciInitializer(beginInterval, endInterval, fibonacciRowSize);
+        fibonacciInitializer.printResults();
     }
 }

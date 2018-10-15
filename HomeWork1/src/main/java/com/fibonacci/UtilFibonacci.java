@@ -3,9 +3,9 @@ package com.fibonacci;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fibonacci {
+public class UtilFibonacci {
 
-    private Fibonacci() {
+    private UtilFibonacci() {
     }
 
     public static List<Integer> createRow(int fibonacciRowSize) {
@@ -45,5 +45,41 @@ public class Fibonacci {
             }
         }
         return maxOdd;
+    }
+
+    public static List<Integer> countEvenNumbersFromStart(int start, int end) {
+        List<Integer> oddNumbers = new ArrayList<>();
+        for (int i = end; i >= start; i--) {
+            if (i % 2 == 0) {
+                oddNumbers.add(i);
+            }
+        }
+        return oddNumbers;
+    }
+
+    public static List<Integer> countOddNumbersFromEnd(int start, int end) {
+        List<Integer> evenNumbers = new ArrayList<>();
+        for (int i = start; i <= end; i++) {
+            if (i % 2 != 0) {
+                evenNumbers.add(i);
+            }
+        }
+        return evenNumbers;
+    }
+
+    public static int countSumOfEvenNumbers(int start, int end) {
+        int oddNumbersSum = 0;
+        for (Integer i : countEvenNumbersFromStart(start, end)) {
+            oddNumbersSum += i;
+        }
+        return oddNumbersSum;
+    }
+
+    public static int countSumOfOddNumbers(int start, int end) {
+        int evenNumbersSum = 0;
+        for (Integer i : UtilFibonacci.countOddNumbersFromEnd(start, end)) {
+            evenNumbersSum += i;
+        }
+        return evenNumbersSum;
     }
 }
