@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planes>
+    <plane id="id_0">
+        <model>Plane1</model>
+        <origin>Ukraine</origin>
+        <chars>
+            <type>Fighter</type>
+            <crew>Two</crew>
+            <ammo status="true">
+                <rocket>2</rocket>
+                <radar>true</radar>
+            </ammo>
+        </chars>
+        <parameters>
+            <length>15</length>
+            <width>10</width>
+            <height>3</height>
+        </parameters>
+        <price>1000</price>
+    </plane>
+    <plane id="id_1">
+        <model>Plane2</model>
+        <origin>USA</origin>
+        <chars>
+            <type>Citizen</type>
+            <crew>Two</crew>
+            <ammo status="false"/>
+        </chars>
+        <parameters>
+            <length>10</length>
+            <width>10</width>
+            <height>5</height>
+        </parameters>
+        <price>100000</price>
+    </plane>
+    <plane id="id_2">
+        <model>Plane3</model>
+        <origin>Russian</origin>
+        <chars>
+            <type>Interceptor</type>
+            <crew>Zero</crew>
+            <ammo status="false">
+                <rocket>0</rocket>
+                <radar>false</radar>
+            </ammo>
+        </chars>
+        <parameters>
+            <length>10</length>
+            <width>10</width>
+            <height>10</height>
+        </parameters>
+        <price>100000</price>
+    </plane>
+</planes>
